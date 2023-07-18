@@ -4,9 +4,9 @@ import { RouterLink } from "vue-router";
 <template>
   <div>
     <div>
-      <RouterLink :to="{ name: 'agregar-cliente' }">Agregar Cliente</RouterLink>
+      <RouterLink :to="{ name: 'inicio' }">Volver</RouterLink>
     </div>
-    <h1 class="text-4xl font-extrabold text-slate-500">Clientes</h1>
+    <h1 class="text-4xl font-extrabold text-slate-500">Agregar Cliente</h1>
   </div>
 </template>
 

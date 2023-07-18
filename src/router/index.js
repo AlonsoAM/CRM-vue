@@ -6,8 +6,13 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "inicio",
       component: ClientesView,
+    },
+    {
+      path: "/agregar-cliente",
+      name: "agregar-cliente",
+      component: () => import("../views/NuevoClienteView.vue"),
     },
   ],
 });
