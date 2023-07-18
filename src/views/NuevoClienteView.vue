@@ -13,9 +13,26 @@ defineProps({
     </div>
     <Heading>{{ titulo }}</Heading>
     <div class="mx-auto mt-10 bg-white shadow">
-      <FormKit type="form"> </FormKit>
+      <div class="mx-auto md:w-2/3 py-20 px-6">
+        <FormKit type="form">
+          <FormKit
+            type="text"
+            label="Nombre"
+            placeholder="Nombre del Cliente"
+            help="Ingrese el nombre del cliente"
+            validation="required"
+            :validation-messages="{
+              required: 'El nombre es requerido',
+            }"
+          />
+        </FormKit>
+      </div>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style>
+.formkit-wrapper {
+  max-width: 100%;
+}
+</style>
