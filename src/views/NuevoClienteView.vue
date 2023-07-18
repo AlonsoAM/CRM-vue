@@ -19,10 +19,40 @@ defineProps({
             type="text"
             label="Nombre"
             placeholder="Nombre del Cliente"
-            help="Ingrese el nombre del cliente"
             validation="required"
             :validation-messages="{
               required: 'El nombre es requerido',
+            }"
+          />
+          <FormKit
+            type="text"
+            label="Apellido"
+            placeholder="Apellido del Cliente"
+            validation="required"
+            :validation-messages="{
+              required: 'El apellido es requerido',
+            }"
+          />
+
+          <FormKit
+            type="email"
+            label="Email"
+            placeholder="Email del Cliente"
+            validation="required|email"
+            :validation-messages="{
+              required: 'El email es requerido',
+              email: 'El email no es valido',
+            }"
+          />
+
+          <FormKit
+            type="text"
+            label="Teléfono"
+            placeholder="Teléfono: XXX-XXX-XXX"
+            validation="required"
+            :validation-messages="{
+              required: 'El email es requerido',
+              email: 'El email no es valido',
             }"
           />
         </FormKit>
