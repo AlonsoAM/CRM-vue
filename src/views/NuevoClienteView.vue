@@ -14,7 +14,11 @@ defineProps({
     <Heading>{{ titulo }}</Heading>
     <div class="mx-auto mt-10 bg-white shadow">
       <div class="mx-auto md:w-2/3 py-20 px-6">
-        <FormKit type="form">
+        <FormKit
+          type="form"
+          :actions="false"
+          incomplete-message="No se pudo enviar, completar los campos requeridos!"
+        >
           <FormKit
             type="text"
             label="Nombre"
@@ -58,6 +62,22 @@ defineProps({
               matches: 'El teléfono no es valido',
             }"
           />
+
+          <FormKit
+            type="text"
+            label="Empresa"
+            placeholder="Empresa del Cliente"
+            prefix-icon="text"
+          />
+
+          <FormKit
+            type="text"
+            label="Puesto"
+            placeholder="Puesto del Cliente"
+            prefix-icon="text"
+          />
+
+          <FormKit type="submit" label="Agregar Cliente" prefix-icon="submit" />
         </FormKit>
       </div>
     </div>
