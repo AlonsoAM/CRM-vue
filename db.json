@@ -8,6 +8,15 @@
       "empresa": "Agricola Andrea",
       "puesto": "Programador",
       "id": 1
+    },
+    {
+      "nombre": "Marcos",
+      "apellido": "Andrade",
+      "email": "marcos@correo.com",
+      "telefono": "999999999",
+      "empresa": "Home",
+      "puesto": "Home",
+      "id": 2
     }
   ]
 }
