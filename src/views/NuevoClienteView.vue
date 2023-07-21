@@ -5,6 +5,10 @@ import Heading from "../components/UI/Heading.vue";
 defineProps({
   titulo: String,
 });
+
+const handleSubmit = (data) => {
+  console.log(data);
+};
 </script>
 <template>
   <div>
@@ -18,9 +22,11 @@ defineProps({
           type="form"
           :actions="false"
           incomplete-message="No se pudo enviar, completar los campos requeridos!"
+          @submit="handleSubmit"
         >
           <FormKit
             type="text"
+            name="nombre"
             label="Nombre"
             placeholder="Nombre del Cliente"
             validation="required"
@@ -31,6 +37,7 @@ defineProps({
           />
           <FormKit
             type="text"
+            name="apellido"
             label="Apellido"
             placeholder="Apellido del Cliente"
             validation="required"
@@ -42,6 +49,7 @@ defineProps({
 
           <FormKit
             type="email"
+            name="email"
             label="Email"
             placeholder="Email del Cliente"
             validation="required|email"
@@ -54,6 +62,7 @@ defineProps({
 
           <FormKit
             type="text"
+            name="telefono"
             label="Teléfono"
             placeholder="Teléfono: XXXXXXXX"
             validation="*matches:/^[0-9]{9}$/"
@@ -65,6 +74,7 @@ defineProps({
 
           <FormKit
             type="text"
+            name="empresa"
             label="Empresa"
             placeholder="Empresa del Cliente"
             prefix-icon="text"
@@ -72,6 +82,7 @@ defineProps({
 
           <FormKit
             type="text"
+            name="puesto"
             label="Puesto"
             placeholder="Puesto del Cliente"
             prefix-icon="text"
