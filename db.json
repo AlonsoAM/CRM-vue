@@ -9,6 +9,16 @@
       "puesto": "Programador",
       "estado": 1,
       "id": 1
+    },
+    {
+      "nombre": "Alonso",
+      "apellido": "Moreno",
+      "email": "alonsystem17@gmail.com",
+      "telefono": "959148798",
+      "empresa": "Agrícola Andrea",
+      "puesto": "Programador",
+      "estado": 0,
+      "id": 2
     }
   ]
 }
