@@ -51,12 +51,11 @@ defineProps({
           <FormKit
             type="text"
             label="Teléfono"
-            placeholder="Teléfono: XXX-XXX-XXX"
-            validation="required"
+            placeholder="Teléfono: XXXXXXXX"
+            validation="*matches:/^[0-9]{9}$/"
             prefix-icon="telephone"
             :validation-messages="{
-              required: 'El email es requerido',
-              email: 'El email no es valido',
+              matches: 'El teléfono no es valido',
             }"
           />
         </FormKit>
