@@ -20,6 +20,7 @@ defineProps({
             label="Nombre"
             placeholder="Nombre del Cliente"
             validation="required"
+            prefix-icon="text"
             :validation-messages="{
               required: 'El nombre es requerido',
             }"
@@ -29,6 +30,7 @@ defineProps({
             label="Apellido"
             placeholder="Apellido del Cliente"
             validation="required"
+            prefix-icon="text"
             :validation-messages="{
               required: 'El apellido es requerido',
             }"
@@ -39,6 +41,7 @@ defineProps({
             label="Email"
             placeholder="Email del Cliente"
             validation="required|email"
+            prefix-icon="email"
             :validation-messages="{
               required: 'El email es requerido',
               email: 'El email no es valido',
@@ -50,6 +53,7 @@ defineProps({
             label="Teléfono"
             placeholder="Teléfono: XXX-XXX-XXX"
             validation="required"
+            prefix-icon="telephone"
             :validation-messages="{
               required: 'El email es requerido',
               email: 'El email no es valido',
