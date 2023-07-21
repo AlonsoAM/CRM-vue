@@ -1,3 +1,13 @@
 {
-  "clientes": []
+  "clientes": [
+    {
+      "nombre": "Alonso",
+      "apellido": "Moreno",
+      "email": "alonsystem17@gmail.com",
+      "telefono": "959148798",
+      "empresa": "Agricola Andrea",
+      "puesto": "Programador",
+      "id": 1
+    }
+  ]
 }
