@@ -6,7 +6,7 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "inicio",
+      name: "clientes",
       component: ClientesView,
       props: { titulo: "Listado de Clientes" },
     },
