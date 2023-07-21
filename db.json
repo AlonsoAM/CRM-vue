@@ -5,18 +5,10 @@
       "apellido": "Moreno",
       "email": "alonsystem17@gmail.com",
       "telefono": "959148798",
-      "empresa": "Agricola Andrea",
+      "empresa": "Agrícola Andrea",
       "puesto": "Programador",
+      "estado": 1,
       "id": 1
-    },
-    {
-      "nombre": "Marcos",
-      "apellido": "Andrade",
-      "email": "marcos@correo.com",
-      "telefono": "999999999",
-      "empresa": "Home",
-      "puesto": "Home",
-      "id": 2
     }
   ]
 }
