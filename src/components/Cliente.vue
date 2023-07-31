@@ -8,7 +8,7 @@ const props = defineProps({
   },
 });
 
-defineEmits(["actualizar-estado"]);
+defineEmits(["actualizar-estado", "eliminar-cliente"]);
 
 const nombreCliente = computed(() => {
   return props.cliente.nombre + " " + props.cliente.apellido;
@@ -38,7 +38,9 @@ const estadoCliente = computed(() => {
             ? 'bg-green-100 text-green-800'
             : 'bg-red-100 text-red-800'
         "
-        @click="$emit('actualizar-estado', {id: cliente.id, estado: cliente.estado})"
+        @click="
+          $emit('actualizar-estado', { id: cliente.id, estado: cliente.estado })
+        "
       >
         {{ estadoCliente ? "Activo" : "Inactivo" }}
       </button>
@@ -49,7 +51,12 @@ const estadoCliente = computed(() => {
         class="text-indigo-500 hover:text-indigo-900 mr-5"
         >Editar</RouterLink
       >
-      <button class="text-red-600 hover:text-red-900">Eliminar</button>
+      <button
+        class="text-red-600 hover:text-red-900"
+        @click="$emit('eliminar-cliente', cliente.id)"
+      >
+        Eliminar
+      </button>
     </td>
   </tr>
 </template>

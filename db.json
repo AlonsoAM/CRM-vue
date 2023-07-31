@@ -9,16 +9,6 @@
       "puesto": "Programador",
       "estado": true,
       "id": 1
-    },
-    {
-      "nombre": "Alonso",
-      "apellido": "Anchante",
-      "email": "alonsystem17@gmail.com",
-      "telefono": "959148798",
-      "empresa": "Agrícola Andrea",
-      "puesto": "Programador",
-      "estado": true,
-      "id": 2
     }
   ]
 }
