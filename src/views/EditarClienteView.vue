@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, reactive } from "vue";
 import ClienteService from "../services/ClienteService";
 import { FormKit } from "@formkit/vue";
 import { useRouter, useRoute } from "vue-router";
@@ -10,10 +10,12 @@ const router = useRouter();
 const route = useRoute();
 const { id } = route.params;
 
+const formData = reactive({});
+
 onMounted(() => {
   ClienteService.obtenerCliente(id)
-    .then((response) => {
-      console.log(response);
+    .then(({ data }) => {
+      Object.assign(formData, data);
     })
     .catch((error) => {
       console.log(error);
@@ -40,6 +42,7 @@ const handleSubmit = (data) => {};
           :actions="false"
           incomplete-message="No se pudo enviar, completar los campos requeridos!"
           @submit="handleSubmit"
+          :value="formData"
         >
           <FormKit
             type="text"
@@ -51,6 +54,7 @@ const handleSubmit = (data) => {};
             :validation-messages="{
               required: 'El nombre es requerido',
             }"
+            v-model="formData.nombre"
           />
           <FormKit
             type="text"
@@ -62,6 +66,7 @@ const handleSubmit = (data) => {};
             :validation-messages="{
               required: 'El apellido es requerido',
             }"
+            v-model="formData.apellido"
           />
 
           <FormKit
@@ -75,6 +80,7 @@ const handleSubmit = (data) => {};
               required: 'El email es requerido',
               email: 'El email no es valido',
             }"
+            v-model="formData.email"
           />
 
           <FormKit
@@ -87,6 +93,7 @@ const handleSubmit = (data) => {};
             :validation-messages="{
               matches: 'El teléfono no es valido',
             }"
+            v-model="formData.telefono"
           />
 
           <FormKit
@@ -95,6 +102,7 @@ const handleSubmit = (data) => {};
             label="Empresa"
             placeholder="Empresa del Cliente"
             prefix-icon="text"
+            v-model="formData.empresa"
           />
 
           <FormKit
@@ -103,9 +111,10 @@ const handleSubmit = (data) => {};
             label="Puesto"
             placeholder="Puesto del Cliente"
             prefix-icon="text"
+            v-model="formData.puesto"
           />
 
-          <FormKit type="submit" label="Agregar Cliente" prefix-icon="submit" />
+          <FormKit type="submit" label="Editar Cliente" prefix-icon="submit" />
         </FormKit>
       </div>
     </div>
