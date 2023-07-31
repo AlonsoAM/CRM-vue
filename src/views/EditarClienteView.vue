@@ -26,7 +26,11 @@ defineProps({
   titulo: String,
 });
 
-const handleSubmit = (data) => {};
+const handleSubmit = (data) => {
+  ClienteService.actualizarCliente(id, data)
+    .then(() => router.push({ name: "clientes" }))
+    .catch((error) => console.log(error));
+};
 </script>
 
 <template>

@@ -1,23 +1,23 @@
 {
   "clientes": [
     {
-      "nombre": "Alonso",
-      "apellido": "Moreno",
+      "nombre": "Alfredo Alonso",
+      "apellido": "Anchante Moreno",
       "email": "alonsystem17@gmail.com",
       "telefono": "959148798",
       "empresa": "Agrícola Andrea",
       "puesto": "Programador",
-      "estado": 1,
+      "estado": true,
       "id": 1
     },
     {
       "nombre": "Alonso",
-      "apellido": "Moreno",
+      "apellido": "Anchante",
       "email": "alonsystem17@gmail.com",
       "telefono": "959148798",
       "empresa": "Agrícola Andrea",
       "puesto": "Programador",
-      "estado": 0,
+      "estado": true,
       "id": 2
     }
   ]
